@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Task7</title>
+	<link rel="stylesheet" type="text/css" href="style/Task7.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<img src="images/smalllogo.png">
+			<div class="logotext">新世界</div>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">最新活动</a></li>
+				<li><a href="#">项目介绍</a></li>
+				<li><a href="#">爱心社区</a></li>
+				<li><a href="#">关于我们</a></li>
+			</ul>
+		</nav>
+		<div class="login">
+			<img src="images/login.png">
+			<div class="logintext">登录</div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="content-1">
+			<div class="content-1-banner">
+				<div class="c1-covor"></div>
+				<div class="banner-text1">Time of new life</div>
+				<div class="banner-text2">新时代，年轻的人们让我们一起
+				<br>体验新生活，享受新生活</div>
+				<p class="button">
+				<a target="_blank" href="www.baidu.com">开始体验</a>
+				</p>
+			</div>
+			<div class="content-1-bottom">
+				<div class="content-1-box">
+					<img src="images/icon1.png">
+					<div class="content-1-bottom-text">打造全新的世界观,让你更爱你的生活</div>
+				</div>
+				<div class="content-1-box">
+					<img src="images/icon2.png"">
+					<div class="content-1-bottom-text">丰富多彩的公益活动，发挥新世界的主人意识</div>
+				</div>
+				<div class="content-1-box">
+					<img src="images/icon3.png"">
+					<div class="content-1-bottom-text">时尚的新理念，超前体验 未知的生活</div>
+				</div>
+				<div class="content-1-box">
+					<img src="images/icon4.png"">
+					<div class="content-1-bottom-lasttext">完善的培养机制，培养你 全新的世界观</div>
+				</div>
+			</div>
+		</div>
+		<div class="content-2">
+			<div class="content-2-banner">
+				<img src="images/biglogo.png">
+				<div>关于新世界，你不知道的还有什么</div>
+			</div>
+			<div class="map">
+				<div class="covor"></div>
+				<div class="c2-title">查找新世界城市活动信息</div>
+				<div class="c2-p">每个城市有不同的活动信息，请自助查询你需要了解的城市</div>
+				<div class="addresslist">
+					<select id="first" onchange="show_province()">
+						<option value="0">国家</option>
+						<option>中国</option>
+						<option>美国</option>
+					</select>
+					<select id="second" onchange="show_city()">
+						<option value="0">省份</option>
+						
+					</select>
+					<select id="third" >
+						<option value="0">城市</option>
+						
+					</select>
+					<input type="submit" value ="搜    索">
+				</div>
+			</div>
+		</div>
+		<script>
+		function show_province()
+		{
+			var country = document.getElementById("first");
+			var province = document.getElementById("second");	
+			/*清楚二级下拉框所有内容*/
+			for (var i = province.options.length ; i >0; i--) {
+				province.remove(i);
+			}
+			
+			// alert(country.selectedIndex);
+			if (country.selectedIndex == 1)
+			{
+				province.options.add(new Option("山西","1"));/*默认选中省会城市*/
+				province.options.add(new Option("河北","2"));
+
+			}
+			if (country.selectedIndex == 2)
+			{
+				province.options.add(new Option("DC","1"));/*默认选中省会城市*/
+				province.options.add(new Option("NewYork","2"));
+
+			}	
+		}
+
+		function show_city()
+		{
+			var country = document.getElementById("first");
+			var province = document.getElementById("second");	
+			var city = document.getElementById("third");
+			/*清楚二级下拉框所有内容*/
+			for (var i = city.options.length ; i >0; i--) {
+				city.remove(i);
+			}
+			
+
+			if (country.selectedIndex == 1 && province.selectedIndex == 1)
+			{
+				city.options.add(new Option("太原",false,true));/*默认选中省会城市*/
+				city.options.add(new Option("运城"));
+				city.options.add(new Option("大同"));
+
+			}
+			if (country.selectedIndex == 1 && province.selectedIndex == 2)
+			{
+				city.options.add(new Option("石家庄",false,true));/*默认选中省会城市*/
+				city.options.add(new Option("唐山"));
+
+			}	
+			if (country.selectedIndex == 2 && province.selectedIndex == 1)
+			{
+				city.options.add(new Option("blabla1",false,true));
+				city.options.add(new Option("blabla2"));
+			}
+			if (country.selectedIndex == 2 && province.selectedIndex == 2)
+				{
+				city.options.add(new Option("blabla3",false,true));
+				city.options.add(new Option("blabla4"));
+			}
+		}
+		</script>
+		<div class="content-3">
+			<div class="colume-1">
+				<img src="images/pic1.png">
+				<div class="bottom-text">北京活动<span>新社区大联盟</span></div>
+			</div>
+			<div class="colume-2">
+				<div class="up-text">上海活动<span>夜上海景观探索</span></div>
+				<img src="images/pic2.png">
+				
+			</div>
+			<div class="colume-1">
+				<img src="images/pic3.png">
+				<div class="bottom-text">深圳活动<span>全新海岸线观点站</span></div>
+			</div>
+			<div class="colume-1">
+				<img src="images/pic4.png">
+				<div class="bottom-text">香港活动<span>奢侈消费大派送</span></div>
+			</div>
+		</div>
+		<div class="content-4">
+			<div class="left">
+				<img id="slidepic" src="images/newworld.png">
+				<div class="left-text-1">新世界</div>
+				<div class="left-text-2">TIME</div>
+				<div class="left-text-3">@新世界-北京<br>2016.04.01</div>
+				<div id="left-tri"></div>
+		    </div>
+		    <div class="right">
+		    	<div id="right-title">新世界/01</div>
+		    	<div id="right-p">新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界</div>
+		    	<div class="right-button">更多详情</div>
+		    	<div class="selectbutton">
+		    		<div class="button1"  onclick="slide('button1')"></div>
+		    		<div class="button2"  onclick="slide('button2')"></div>
+		    		<div class="button3"  onclick="slide('button3')"></div>
+		    	</div>
+		    </div>
+		</div>
+		<script type="text/javascript">
+		function slide(btn)
+		{
+			var title = document.getElementById("right-title");
+			element = document.getElementById('slidepic');
+			tri = document.getElementById('left-tri');
+			if (btn == 'button1') 
+			{
+				document.getElementById("right-title").innerHTML = "新世界/01";
+				document.getElementById("right-p").innerHTML = "新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界新世界";
+				element.src = "images/newworld.png";
+				tri.style.top = "280px";
+
+			}
+			if (btn == 'button2') 
+			{
+				document.getElementById("right-title").innerHTML = "新世界/02";
+				document.getElementById("right-p").innerHTML = "新世界02新世界02新世界02新世界02新世界02新世界02新世界02新世界02新世界02新世界02新世界02新世界02新世界02";
+				element.src = "images/newworld2.png";
+				tri.style.top = "300px";
+			}
+			if (btn == 'button3') 
+			{
+				document.getElementById("right-title").innerHTML = "新世界/03";
+				document.getElementById("right-p").innerHTML = "新世界03新世界03新世界03新世界03新世界03新世界03新世界03新世界03新世界03新世界03新世界03新世界03";
+				element.src = "images/newworld3.png";
+				tri.style.top = "320px";
+			}
+
+		}
+		</script>
+		<div class="content-5">
+			<div class="c5-colume1">
+			</div>
+			<div class="c5-colume2"></div>
+			<div class="c5-colume3">
+				<img src="images/train.png">
+				<div class="right-tri"></div>
+			</div>
+		</div>
+		<div class="content-6">
+			<div class="c6-title">成为我们的志愿者</div>
+			<div class="gege"></div>
+			<div class="c6-p">新世界的大家庭需要每一个爱生活的人的加入，如果你够年轻，有梦想，有激情 那就不要犹豫，快来加入我们，成为改变所有人生活的人 </div>
+			<div class="c6-left">
+				<div>
+					<div class="c6-left-title">新世界志愿者协议</div>
+					<div class="c6-left-text">加入新世界志愿者的人员必须遵守中华人民共共和国的 相关法律法规，并且本着平等资源的原则 ......
+						<div>
+							<p>more</p>
+							<img src="images/arrow.png">
+						</div>
+					</div>
+										
+				</div>
+				<div>
+					<div class="c6-left-title">新世界志愿者权利</div>
+					<div class="c6-left-text">加入新世界志愿者的人员必须遵守中华人民共共和国的 相关法律法规，并且本着平等资源的原则 ...... 
+						<div>
+							<p>more</p>
+							<img src="images/arrow.png">
+						</div>
+					
+					</div>
+					
+				</div>
+				<div>
+					<div class="c6-left-title">更多条款</div>
+					<div class="c6-left-text">
+						<div>
+							<p>more</p>
+							<img src="images/arrow.png">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="c6-right">
+				<form>
+					<input type="text" name="姓名" placeholder="姓名：">
+					<input type="text" name="年龄" placeholder="年龄：">
+					<input type="text" name="联系方式" placeholder="联系方式：">
+					<input type="text" name="通讯地址" placeholder="通讯地址：">
+					<textarea cols="30" rows="10" placeholder="请描述你梦想的生活"></textarea>
+					<input type="submit" value="提交申请">
+				</form>
+			</div>
+		</div>
+		<div class="contact">
+			<div class="ft-title">联系我们</div>
+			<div class="ft-p">为了更好的获取我们最新的产品资讯，您可以留下您的电子邮箱快速订阅我们的产品资讯<br>也可以通过以下任何方式关注我们动态</div>
+			<div class="enteremail">
+				<input type="email" name="email" placeholder="name@email.com">
+				<input type="submit" value="提交">
+			</div>
+			<div class="share">
+				<a href="#"><img src="images/link1.png"></a> 
+				<a href="#"><img src="images/link2.png"></a> 
+				<a href="#"><img src="images/link3.png"></a> 
+				<a href="#"><img src="images/link4.png"></a> 
+			</div>
+		</div>
+
+	</div>
+
+	<footer>
+		<div class="copyright">@2016新世界</div>
+		<div class="back2top">
+			<a href="#top">Back To Top</a>
+		</div>
+	</footer>
+
+
+</body>
+</html>
