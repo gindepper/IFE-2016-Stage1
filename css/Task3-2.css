@@ -1,0 +1,35 @@
+#container,#team,section,#sidebar,.logo{
+	padding: 20px;
+	border:1px solid #999;
+}
+#container{
+	background-color: #BABABA;
+	overflow: auto;
+	margin:20px;
+	min-width: 600px;
+}
+#team{
+	width: 160px;
+	float: left;
+	background-color: #FFFFFF;
+}
+#sidebar{
+	float: right;
+	width: 80px;
+	background-color: #FFFFFF;
+}
+section{
+	background-color: #FFFFFF;
+	margin-left:220px;
+	margin-right: 140px;
+
+}
+
+.logo{
+	float: left;
+	width: 80px;
+	height: 80px;
+	padding: 0;
+	margin: 0px 10px 10px 0;
+
+}

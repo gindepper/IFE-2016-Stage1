@@ -1,0 +1,154 @@
+*{
+	margin: 0;padding: 0;
+
+}
+body{
+	font-family: 'Microsoft YaHei';
+	background: #dedede;
+}
+header{
+	background-color: #000000;
+	height: 60px;
+
+
+}
+.navlogo{
+	float: left;
+	color: #EB0808;
+	text-align: center;
+	padding: 10px 0 0 20px;
+
+}
+/*这里将navbar浮动后，脱离文档流，宽度为整个文档*/
+/*ul用绝对定位，宽度取决于li的宽度*/
+.navbar ul{
+	position: absolute;
+	margin-left: 300px;
+	top: 0;
+	right: 15px;/*绝对定位的位置，距离右侧15px*/
+}
+.navbar ul li{
+	display: block;
+	float: left;
+	padding: 20px 10px ;
+	text-align: center;
+	width: 100px;
+
+}
+.navbar ul li a{
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 12px;
+}
+.navbar ul li:hover{
+	border-bottom: 1px solid red;
+	background-color: #474747;
+
+}
+
+
+.container{
+	position: relative;
+	margin-right: 380px;
+	
+
+}
+article,#sidebar{
+	margin:20px 20px;
+	padding: 20px 20px;
+	background-color: #FFFFFF;
+	box-shadow: 3px 3px 3px #333;	
+}
+article p{
+	text-indent: 2em;
+	line-height: 30px;
+}
+article h3{
+	color: #929292
+}
+article p img{
+	width: 200px;
+	display: block;
+}
+.auther-time{
+	color: #C5C5C5
+
+}
+#imgcol{
+	overflow: auto;
+}
+.imgbox{
+	display: inline-block;
+	float: left;
+	border-style: solid;
+	border-witdh: 1px;
+	border-color: #A1A1A1;
+	margin: 25px 10px;
+	padding:5px;
+	width: 100px;
+:
+}
+.imgbox img{
+	width: 100px;
+}
+.imgbox p{
+	padding: 5px;
+	text-align: center;
+	text-indent: 0;
+}
+article ol,article ul{
+	margin: 10px 10px 10px 40px;
+}
+#tablebox{
+	border-collapse: collapse;
+	width: 100%;
+}
+#tablebox td,#tablebox tr{
+	padding: 3px;
+	border:1px solid #9B9B9B;
+}
+#tablebox tr th{
+	background-color: #585858;
+	color: #FFFFFF;
+	text-decoration: bold;
+}
+#tablebox tr.lastline{
+	background-color: #969696;
+}
+#sidebar{
+	float: right;
+	width: 320px;
+}
+#sidebar form{
+	line-height: 30px;
+}
+.tip{
+	display: inline-block;
+	text-align: right;
+	width: 35%;
+	padding-right: 20px;
+
+}
+#sidebar form div textarea{
+	height: 100px;
+	vertical-align: top;
+}
+.submitbutton{
+	border-radius:10px;
+	height: 35px;
+	background-color:#128fdc;
+	color: #FFFFFF;
+	font-size: 18px;
+	border:none;
+	width: 100%;
+	margin:10px;
+	
+}
+footer{
+	width: 100%;
+	background-color: black;
+	text-align: center;
+	line-height: 60px;
+	height: 60px;
+	color: #FFFFFF;
+}
